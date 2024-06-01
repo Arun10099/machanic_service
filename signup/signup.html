@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Fix Auto</title>
+    <link rel="stylesheet" href="sign up.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="signup-box">
+        <button class="close-btn" onclick="closeSignup()">&times;</button>
+        <h2>Sign Up</h2>
+        <p>Already have an account? <a href="\login\login.html">Log in</a></p>
+        <div class="social-login">
+          <button onclick="loginWithGoogle()" class="social-btn google">
+            Google
+          </button>
+          <button onclick="loginWithFacebook()" class="social-btn facebook">
+            Facebook
+          </button>
+        </div>
+        <div class="or">OR</div>
+        <form id="signupForm" onsubmit="signup(event)">
+          <input type="email" name="email" placeholder="email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+          <input
+            type="text"
+            name="first_name"
+            placeholder="first name"
+            required
+          />
+          <input
+            type="text"
+            name="last_name"
+            placeholder="last name"
+            required
+          />
+          <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        <p>
+          By signing up you agree to our <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>
+        </p>
+        <label class="newsletter">
+          <input type="checkbox" checked /> Email me with news and updates
+        </label>
+      </div>
+    </div>
+    <script src="/signup/signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+/* Basic styling for the body and container elements */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header and navigation styling */
+/* Reset some default browser styles */
+body,
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  flex: 1;
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 1rem;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: translateY(-5px);
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Specific styling for Login / Sign Up links */
+nav ul li a:last-child {
+  margin-left: 0.5rem;
+}
+
+/* Hero section styling */
+.hero {
+  background: url("hero-image.jpg") no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.cta-button {
+  background: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Common section styling */
+section {
+  padding: 2rem;
+}
+
+/* Service highlights styling */
+.service-highlights,
+.testimonials,
+.service-list,
+.team,
+.certifications,
+.contact-info,
+.social-media {
+  margin: 2rem;
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Fix Auto</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <button class="close-btn" onclick="closeAndGoHome()">&times;</button>
+        <h2>Log In</h2>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <div class="social-login">
+          <button onclick="loginWithGoogle()" class="social-btn google">
+            Google
+          </button>
+          <button onclick="loginWithFacebook()" class="social-btn facebook">
+            Facebook
+          </button>
+        </div>
+        <div class="or">OR</div>
+        <form id="loginForm" onsubmit="login(event)">
+          <input type="email" name="email" placeholder="email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

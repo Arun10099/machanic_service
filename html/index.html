@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Fix Auto</title>
+    <link rel="stylesheet" href="/css\style.css" />
+    <link rel="stylesheet" href="/login\demo.css" />
+    <link rel="stylesheet" href="/login\login.html" />
+    <link rel="stylesheet" href="/signup/signup.html" />
+    <link rel="stylesheet" href="/signup/sign up.css" />
+    <link rel="stylesheet" href="signup/signup.js" />
+
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Quick Fix Auto</h1>
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#customer-portal">Customer Portal</a></li>
+          <li>
+            <a href="\login\login.html" id="login-link">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-container" style="display: none">
+      <div class="login-box">
+        <button class="close-btn" onclick="closeLogin()">&times;</button>
+        <h2>Log In</h2>
+        <p>Don't have an account? <a href="/signup/signup.html">Sign up</a></p>
+        <div class="social-login">
+          <button onclick="loginWithGoogle()" class="social-btn google">
+            Google
+          </button>
+          <button onclick="loginWithFacebook()" class="social-btn facebook">
+            Facebook
+          </button>
+          
+          </button>
+        </div>
+        <div class="or">OR</div>
+        <form id="loginForm" onsubmit="login(event)">
+          <input type="email" name="email" placeholder="email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+    </div>
+
+    <script src="/js/header.js"></script>
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-container" style="display: none">
+      <div class="login-box">
+        <button class="close-btn" onclick="closeLogin()">&times;</button>
+        <h2>Log In</h2>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <div class="social-login">
+          <button onclick="loginWithGoogle()" class="social-btn google">
+            Google
+          </button>
+          <button onclick="loginWithFacebook()" class="social-btn facebook">
+            Facebook
+          </button>
+          <button onclick="loginWithGithub()" class="social-btn github">
+            Github
+          </button>
+          <button onclick="loginWithFeide()" class="social-btn feide">
+            Feide
+          </button>
+        </div>
+        <div class="or">OR</div>
+        <form id="loginForm" onsubmit="login(event)">
+          <input type="email" name="email" placeholder="email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+    </div>
+
+    <script src="/login/login.js"></script>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="hero">
+        <h1>Welcome to Quick Fix Auto</h1>
+        <p>Your one-stop solution for car repair and maintenance</p>
+        <a href="#services" class="cta-button">Book Now</a>
+      </div>
+      <div class="service-highlights">
+        <div class="highlight">
+          <h2>On-site Repair</h2>
+          <p>We come to you for all your repair needs.</p>
+        </div>
+        <div class="highlight">
+          <h2>Routine Maintenance</h2>
+          <p>Regular check-ups to keep your car running smoothly.</p>
+        </div>
+        <div class="highlight">
+          <h2>Emergency Services</h2>
+          <p>24/7 support for urgent repairs.</p>
+        </div>
+      </div>
+      <div class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <p>“Fantastic service! My car runs like new.” – Jane Doe</p>
+        <p>“Quick and reliable, highly recommend.” – John Smith</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service">
+          <h3>On-site Repair</h3>
+          <p>Details about on-site repair services.</p>
+        </div>
+        <div class="service">
+          <h3>Routine Maintenance</h3>
+          <p>Details about routine maintenance services.</p>
+        </div>
+        <div class="service">
+          <h3>Emergency Services in Remote Area</h3>
+          <p>Details about emergency services.</p>
+        </div>
+      </div>
+      <div class="booking-system">
+        <h2>Book an Appointment</h2>
+        <form>
+          <!-- Form fields for booking -->
+        </form>
+      </div>
+      <div class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <!-- List of FAQs -->
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Our story and mission.</p>
+      <div class="team">
+        <h2>Meet Our Team</h2>
+        <!-- Team members info -->
+      </div>
+      <div class="certifications">
+        <h2>Our Certifications</h2>
+        <!-- Certifications info -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <!-- Contact form fields -->
+      </form>
+      <div class="contact-info">
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@mechanicservice.com</p>
+        <p>Address: 123 Main Street, Anytown, USA</p>
+        <div class="social-media">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Portal -->
+    <section id="customer-portal">
+      <div class="appointments">
+        <h2>Manage Appointments</h2>
+        <!-- Appointment management -->
+      </div>
+      <div class="service-history">
+        <h2>Service History</h2>
+        <!-- Service history records -->
+      </div>
+      <div class="payment-system">
+        <h2>Payments</h2>
+        <!-- Payment processing -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Quick Fix Auto. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
