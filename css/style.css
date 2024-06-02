@@ -8,6 +8,7 @@ body {
 
 /* Header and navigation styling */
 /* Reset some default browser styles */
+
 body,
 h1,
 ul,
@@ -24,7 +25,7 @@ body {
 }
 
 header {
-  background: #333;
+  background: #0d0a0a;
   color: white;
   padding: 0.5rem 1rem;
   display: flex;
@@ -36,9 +37,8 @@ header .logo {
   flex: 1;
 }
 
-header .logo h1 {
-  margin: 0;
-  font-size: 1.5rem;
+.logo img {
+  height: 50px; /* Adjust as needed */
 }
 
 nav {
@@ -85,14 +85,68 @@ nav ul li a:last-child {
   padding: 5rem 0;
 }
 
+.hero .dropdown li {
+  margin: 12px;
+  padding: 0;
+  list-style: none;
+}
+
 .cta-button {
   background: #007bff;
   color: white;
   padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.cta-button:hover {
+  background-color: #646e79;
+  transform: translateY(-5px);
+  color: white;
+}
+
+/* Dropdown styles for Book Now button */
+.book-now-container {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+}
+
+.book-now-container .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgb(255, 255, 255);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-now-container:hover .dropdown {
+  display: block;
+}
+
+.book-now-container .dropdown li {
+  width: 200px;
+}
+
+.book-now-container .dropdown li a {
+  padding: 10px 0px;
+  color: rgb(9, 7, 7);
+  background: #ffffff;
+  transition: all 0.3s ease;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.book-now-container .dropdown li a:hover {
+  background-color: #f0f0f0;
+  color: black; /* Ensure text is readable */
+}
 /* Common section styling */
 section {
   padding: 2rem;
@@ -116,4 +170,155 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem 0;
+}
+
+/* Dropdown styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover > a {
+  background-color: #f0f0f0;
+}
+
+nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 2rem; /* Increased padding */
+  margin: 0;
+  border: 1px solid #ccc; /* Added border */
+}
+
+nav ul li:hover ul.dropdown {
+  display: block;
+}
+
+nav ul li ul.dropdown li {
+  width: 400px; /* Increased width */
+}
+
+nav ul li ul.dropdown li a {
+  padding: 1.5rem; /* Increased padding */
+  color: black;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+nav ul li ul.dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+.partner-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* Footer Styling */
+footer {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-section-1 {
+  flex: 1;
+  min-width: 200px;
+  margin: 1.3rem;
+  position: relative;
+  right: 10vw;
+}
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 1rem;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  color: #ddd;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-media a {
+  margin: 0 0.5rem;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  right: 69px;
+}
+
+.social-media a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  text-align: center;
 }

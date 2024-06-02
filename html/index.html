@@ -4,30 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick Fix Auto</title>
-    <link rel="stylesheet" href="/css\style.css" />
-    <link rel="stylesheet" href="/login\demo.css" />
-    <link rel="stylesheet" href="/login\login.html" />
-    <link rel="stylesheet" href="/signup/signup.html" />
-    <link rel="stylesheet" href="/signup/sign up.css" />
-    <link rel="stylesheet" href="signup/signup.js" />
-
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/login/demo.css" />
+    <link rel="stylesheet" href="/signup/sign%20up.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav>
         <div class="logo">
-          <h1>Quick Fix Auto</h1>
+          <img src="/css/Screenshot_2024-06-02_055538-removebg-preview.png" alt="Logo" />
         </div>
-        <ul>
+        <ul class="navbar">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#customer-portal">Customer Portal</a></li>
           <li>
-            <a href="\login\login.html" id="login-link">Login</a>
+            <a href="#services">Services</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/html/appointment.html">
+                  <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbAGWM6MzQf-tIDVscBHsVFkzXg2ht-Dw-IrF4X7tLcOmWnRy2" alt="Appointment Logo" class="partner-logo" />
+                  Book Appointment
+                </a>
+              </li>
+              <li>
+                <a href="/html/emergency-booking.html">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4blB63BR2Qz0u1JsN3WV4N86ZB_MPYAEyC6_-ijCn8EGAOM" alt="Emergency Service Logo" class="partner-logo" />
+                  Emergency Service
+                </a>
+              </li>
+            </ul>
           </li>
+          <li>
+            <a href="#for-business">For Business</a>
+            <ul class="dropdown">
+              <li>
+                <a href="#mechanic-partner">
+                  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4u5KSxkv8UH3i_0pNbfJwjrET5vU-6gV5_myiqEP59hI8jxTU" alt="Partner Logo" class="partner-logo" />
+                  Mechanic Partner
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+            <ul class="dropdown-about"></ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/login/login.html" id="login-link">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -39,24 +62,13 @@
         <h2>Log In</h2>
         <p>Don't have an account? <a href="/signup/signup.html">Sign up</a></p>
         <div class="social-login">
-          <button onclick="loginWithGoogle()" class="social-btn google">
-            Google
-          </button>
-          <button onclick="loginWithFacebook()" class="social-btn facebook">
-            Facebook
-          </button>
-          
-          </button>
+          <button onclick="loginWithGoogle()" class="social-btn google">Google</button>
+          <button onclick="loginWithFacebook()" class="social-btn facebook">Facebook</button>
         </div>
         <div class="or">OR</div>
         <form id="loginForm" onsubmit="login(event)">
           <input type="email" name="email" placeholder="email" required />
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            required
-          />
+          <input type="password" name="password" placeholder="password" required />
           <button type="submit" class="login-btn">Login</button>
         </form>
         <a href="#" class="forgot-password">Forgot Password?</a>
@@ -64,41 +76,6 @@
     </div>
 
     <script src="/js/header.js"></script>
-    <!-- Login Modal -->
-    <div id="login-modal" class="login-container" style="display: none">
-      <div class="login-box">
-        <button class="close-btn" onclick="closeLogin()">&times;</button>
-        <h2>Log In</h2>
-        <p>Don't have an account? <a href="#">Sign up</a></p>
-        <div class="social-login">
-          <button onclick="loginWithGoogle()" class="social-btn google">
-            Google
-          </button>
-          <button onclick="loginWithFacebook()" class="social-btn facebook">
-            Facebook
-          </button>
-          <button onclick="loginWithGithub()" class="social-btn github">
-            Github
-          </button>
-          <button onclick="loginWithFeide()" class="social-btn feide">
-            Feide
-          </button>
-        </div>
-        <div class="or">OR</div>
-        <form id="loginForm" onsubmit="login(event)">
-          <input type="email" name="email" placeholder="email" required />
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            required
-          />
-          <button type="submit" class="login-btn">Login</button>
-        </form>
-        <a href="#" class="forgot-password">Forgot Password?</a>
-      </div>
-    </div>
-
     <script src="/login/login.js"></script>
 
     <!-- Home Section -->
@@ -106,8 +83,25 @@
       <div class="hero">
         <h1>Welcome to Quick Fix Auto</h1>
         <p>Your one-stop solution for car repair and maintenance</p>
-        <a href="#services" class="cta-button">Book Now</a>
+        <div class="book-now-container">
+          <a href="#book-now" class="cta-button">Book Now</a>
+          <ul class="dropdown">
+            <li>
+              <a href="/html/appointment.html">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbAGWM6MzQf-tIDVscBHsVFkzXg2ht-Dw-IrF4X7tLcOmWnRy2" alt="Appointment Logo" class="partner-logo" />
+                Book Appointment
+              </a>
+            </li>
+            <li>
+              <a href="/html/emergency-booking.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4blB63BR2Qz0u1JsN3WV4N86ZB_MPYAEyC6_-ijCn8EGAOM" alt="Emergency Service Logo" class="partner-logo" />
+                Emergency Service
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+
       <div class="service-highlights">
         <div class="highlight">
           <h2>On-site Repair</h2>
@@ -171,25 +165,7 @@
         <!-- Certifications info -->
       </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form>
-        <!-- Contact form fields -->
-      </form>
-      <div class="contact-info">
-        <p>Phone: 123-456-7890</p>
-        <p>Email: info@mechanicservice.com</p>
-        <p>Address: 123 Main Street, Anytown, USA</p>
-        <div class="social-media">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
-        </div>
-      </div>
-    </section>
-
+    
     <!-- Customer Portal -->
     <section id="customer-portal">
       <div class="appointments">
@@ -208,7 +184,35 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2024 Quick Fix Auto. All rights reserved.</p>
-    </footer>
-  </body>
-</html>
+      <div class="footer-container">
+        <div class="footer-section-1">
+          <h3>About Quick Fix Auto</h3>
+          <p>
+            Quick Fix Auto is your trusted partner for all your car repair and maintenance needs. We provide high-quality services to ensure your vehicle is always in top condition.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="customer-portal.html">Customer Portal</a></li>
+            <li><a href="appointment
+              <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: info@quickfixauto.com</p>
+                <p>Address: 123 Main Street, Anytown, USA</p>
+                <div class="social-media">
+                  <a href="#">Facebook</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Instagram</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2024 Quick Fix Auto. All rights reserved.</p>
+            </div>
+          </footer>
