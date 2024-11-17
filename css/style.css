@@ -1,0 +1,524 @@
+/* Basic styling for the body and container elements */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #9f9696;
+  box-sizing: border-box;
+}
+
+/* Header and navigation styling */
+/* Reset some default browser styles */
+
+body,
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7a7575;
+}
+.background-image {
+  background: url("https://img.freepik.com/free-photo/top-view-woman-repairing-car_23-2150171263.jpg")
+    no-repeat center center/cover;
+  height: 380px;
+  width: 100%;
+  position: relative;
+}
+
+header {
+  background: #0d0a0a;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #6a6767; /* Add background color to avoid content overlapping */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  flex: 1;
+}
+
+.logo img {
+  height: 50px; /* Adjust as needed */
+}
+
+nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 1rem;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: translateY(-5px);
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Specific styling for Login / Sign Up links */
+nav ul li a:last-child {
+  margin-left: 0.5rem;
+}
+/* hero section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  background: url("\Untitled design (3).png") no-repeat center center/cover;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.login-form-container {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-left: 2rem;
+}
+
+.login-form-container h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.login-form-container p {
+  text-align: center;
+}
+
+.sign-up-link {
+  color: green;
+}
+
+.google-button,
+.facebook-button,
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-button {
+  background-color: #db4437;
+  color: white;
+}
+
+.facebook-button {
+  background-color: #4267b2;
+  color: white;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-container input {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.forgot-password-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+/* Hero section styling */
+.hero {
+  background: url("hero-image.jpg") no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.hero .dropdown li {
+  margin: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.cta-button {
+  background: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #646e79;
+  transform: translateY(-5px);
+  color: white;
+}
+
+/* Dropdown styles for Book Now button */
+.book-now-container {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+}
+
+.book-now-container .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgb(255, 255, 255);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-now-container:hover .dropdown {
+  display: block;
+}
+
+.book-now-container .dropdown li {
+  width: 200px;
+}
+
+.book-now-container .dropdown li a {
+  padding: 10px 0px;
+  color: rgb(9, 7, 7);
+  background: #ffffff;
+  transition: all 0.3s ease;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.book-now-container .dropdown li a:hover {
+  background-color: #f0f0f0;
+  color: black; /* Ensure text is readable */
+}
+
+/* Common section styling */
+section {
+  padding: 2rem;
+}
+
+/* Service highlights styling */
+.service-highlights,
+.testimonials,
+.service-list,
+.team,
+.certifications,
+.contact-info,
+.social-media {
+  margin: 2rem;
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Dropdown styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover > a {
+  background-color: #f0f0f0;
+}
+
+nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 2rem; /* Increased padding */
+  margin: 0;
+  border: 1px solid #ccc; /* Added border */
+}
+
+nav ul li:hover ul.dropdown {
+  display: block;
+}
+
+nav ul li ul.dropdown li {
+  width: 400px; /* Increased width */
+}
+
+nav ul li ul.dropdown li a {
+  padding: 1.5rem; /* Increased padding */
+  color: black;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+nav ul li ul.dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+.partner-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* Footer Styling */
+footer {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+  /*max-width: 1200px; */
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-section-1 {
+  flex: 1;
+  min-width: 200px;
+  margin: 1.3rem;
+  position: relative;
+  right: 10vw;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 1rem;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  color: #ddd;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-media a {
+  margin: 0 0.5rem;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  right: 69px;
+}
+
+/* Footer styling */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Dropdown styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #847d7d;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover > a {
+  background-color: #f0f0f0;
+}
+
+nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 2rem; /* Increased padding */
+  margin: 0;
+  border: 1px solid #ccc; /* Added border */
+}
+
+nav ul li:hover ul.dropdown {
+  display: block;
+}
+
+nav ul li ul.dropdown li {
+  width: 400px; /* Increased width */
+}
+
+nav ul li ul.dropdown li a {
+  padding: 1.5rem; /* Increased padding */
+  color: black;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+nav ul li ul.dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+.partner-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.team {
+  padding: 50px 20px;
+  background-color: #e0e0e0;
+  margin-top: 30px;
+}
+
+.team h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.team-member {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1em;
+  color: #666;
+}
+
+.team-member img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}

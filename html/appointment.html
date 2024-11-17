@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Form - Quick Fix Auto</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/appointment.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="\css\Screenshot_2024-06-02_055538-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li>
+            <a href="#services">Services</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/html/appointment.html">
+                  <img
+                    src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbAGWM6MzQf-tIDVscBHsVFkzXg2ht-Dw-IrF4X7tLcOmWnRy2"
+                    alt="Appointment Logo"
+                    class="partner-logo"
+                  />
+                  Book Appointment
+                </a>
+              </li>
+              <li>
+                <a href="/html/emergency-booking.html">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4blB63BR2Qz0u1JsN3WV4N86ZB_MPYAEyC6_-ijCn8EGAOM"
+                    alt="Emergency Service Logo"
+                    class="partner-logo"
+                  />
+                  Emergency Service
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#for-business">For Business</a>
+            <ul class="dropdown">
+              <li>
+                <a href="#mechanic-partner">
+                  <img
+                    src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4u5KSxkv8UH3i_0pNbfJwjrET5vU-6gV5_myiqEP59hI8jxTU"
+                    alt="Partner Logo"
+                    class="partner-logo"
+                  />
+                  Mechanic Partner
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+            <ul class="dropdown-about"></ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/login/login.html" id="login-link">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="appointment">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="/css/Screenshot_2024-06-02_055538-removebg-preview.png"
+            alt="Logo"
+          />
+        </div>
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+          <div class="form-group">
+            <label for="name">Customer Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required />
+          </div>
+          <div class="form-group">
+            <label for="car-make">Car Make</label>
+            <input type="text" id="car-make" name="car-make" required />
+          </div>
+          <div class="form-group">
+            <label for="car-model">Car Model</label>
+            <input type="text" id="car-model" name="car-model" required />
+          </div>
+          <div class="form-group">
+            <label for="car-year">Year of Purchase</label>
+            <input type="number" id="car-year" name="car-year" required />
+          </div>
+          <div class="form-group">
+            <label for="service-details">Service Details</label>
+            <textarea
+              id="service-details"
+              name="service-details"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Quick Fix Auto. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/appointment.js"></script>
+  </body>
+</html>

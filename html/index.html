@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Fix Auto</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/login/demo.css" />
+    <link rel="stylesheet" href="/signup/sign%20up.css" />
+    <link rel="stylesheet" href="../css/service.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="/css/Screenshot_2024-06-02_055538-removebg-preview.png"
+            alt="Logo"
+          />
+        </div>
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li>
+            <a href="#services">Services</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/html/appointment.html">
+                  <img
+                    src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbAGWM6MzQf-tIDVscBHsVFkzXg2ht-Dw-IrF4X7tLcOmWnRy2"
+                    alt="Appointment Logo"
+                    class="partner-logo"
+                  />
+                  Book Appointment
+                </a>
+              </li>
+              <li>
+                <a href="/html/emergency-booking.html">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4blB63BR2Qz0u1JsN3WV4N86ZB_MPYAEyC6_-ijCn8EGAOM"
+                    alt="Emergency Service Logo"
+                    class="partner-logo"
+                  />
+                  Emergency Service
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#for-business">For Business</a>
+            <ul class="dropdown">
+              <li>
+                <a href="\html\bussiness-partner.html">
+                  <img
+                    src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4u5KSxkv8UH3i_0pNbfJwjrET5vU-6gV5_myiqEP59hI8jxTU"
+                    alt="Partner Logo"
+                    class="partner-logo"
+                  />
+                  Mechanic Partner
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+            <ul class="dropdown-about"></ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/login/login.html" id="login-link">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-image"></div>
+      <div class="login-form-container">
+        <h1>Log In</h1>
+        <p>
+          Don't have an account?
+          <a href="/signup/signup.html" class="sign-up-link">Sign up</a>
+        </p>
+        <button class="google-button">Google</button>
+        <button class="facebook-button">Facebook</button>
+        <div class="or-divider">OR</div>
+        <form action="#">
+          <input type="email" placeholder="email" required />
+          <input type="password" placeholder="password" required />
+          <button type="submit" class="login-button">Login</button>
+        </form>
+        <a href="#forgot-password" class="forgot-password-link"
+          >Forgot Password?</a
+        >
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-container" style="display: none">
+      <div class="login-box">
+        <button class="close-btn" onclick="closeLogin()">&times;</button>
+        <h2>Log In</h2>
+        <p>Don't have an account? <a href="/signup/signup.html">Sign up</a></p>
+        <div class="social-login">
+          <button onclick="loginWithGoogle()" class="social-btn google">
+            Google
+          </button>
+          <button onclick="loginWithFacebook()" class="social-btn facebook">
+            Facebook
+          </button>
+        </div>
+        <div class="or">OR</div>
+        <form id="loginForm" onsubmit="login(event)">
+          <input type="email" name="email" placeholder="email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+    </div>
+
+    <script src="/js/header.js"></script>
+    <script src="/login/login.js"></script>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="hero">
+        <h1>Welcome to Quick Fix Auto</h1>
+        <p>Your one-stop solution for car repair and maintenance</p>
+        <div class="book-now-container">
+          <a href="#book-now" class="cta-button">Book Now</a>
+          <ul class="dropdown">
+            <li>
+              <a href="/html/appointment.html">
+                <img
+                  src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbAGWM6MzQf-tIDVscBHsVFkzXg2ht-Dw-IrF4X7tLcOmWnRy2"
+                  alt="Appointment Logo"
+                  class="partner-logo"
+                />
+                Book Appointment
+              </a>
+            </li>
+            <li>
+              <a href="/html/emergency-booking.html">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4blB63BR2Qz0u1JsN3WV4N86ZB_MPYAEyC6_-ijCn8EGAOM"
+                  alt="Emergency Service Logo"
+                  class="partner-logo"
+                />
+                Emergency Service
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-highlights">
+        <div class="highlight">
+          <h2>On-site Repair</h2>
+          <p>We come to you for all your repair needs.</p>
+        </div>
+        <div class="highlight">
+          <h2>Routine Maintenance</h2>
+          <p>Regular check-ups to keep your car running smoothly.</p>
+        </div>
+        <div class="highlight">
+          <h2>Emergency Services</h2>
+          <p>24/7 support for urgent repairs.</p>
+        </div>
+      </div>
+      
+    </section>
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="container">
+       
+        <div class="service-list">
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0013.jpg" width="100px" alt="">
+            <h3>Car Wash Service</h3>
+            <p>Professional car wash services to keep your vehicle looking spotless.</p>
+          </div>
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0016.jpg" width="100px" alt="">
+            <h3>Emergency Service</h3>
+            <p>24/7 emergency services for any urgent car repair needs.</p>
+          </div>
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0017.jpg" width="100px" alt="">
+            <h3>Car Inspection</h3>
+            <p>Comprehensive car inspections to ensure your vehicle is in top condition.</p>
+          </div>
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0015.jpg" width="100px" alt="">
+            <h3>Denting and Painting</h3>
+            <p>Expert denting and painting services to restore your car's appearance.</p>
+          </div>
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0014.jpg" width="100px" alt="">
+            <h3>Battery</h3>
+            <p>Battery replacement and maintenance services for all car models.</p>
+          </div>
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0018.jpg" width="80px" alt="">
+            <h3>Body Part Change</h3>
+            <p>Replacement of damaged body parts to maintain your car's integrity.</p>
+          </div>
+          <div class="service">
+            <img src="\html\img\IMG-20240603-WA0012.jpg" width="100px" alt="">
+            <h3>Clutch and Brake</h3>
+            <p>Specialized services for clutch and brake repairs and replacements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+      <div class="booking-system">
+        <h2>Book an Appointment</h2>
+        <form>
+          <!-- Form fields for booking -->
+        </form>
+      </div>
+      <div class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <p>“Fantastic service! My car runs like new.” – Jane Doe</p>
+        <p>“Quick and reliable, highly recommend.” – John Smith</p>
+      </div>
+      <div class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <!-- List of FAQs -->
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        <h2>Welcome to Quick Fix Auto!</h2>
+        
+        <span>At Quick Fix Auto, we are dedicated to providing top-notch car repair and maintenance services right at your doorstep. Our mission is to make car care easy, convenient, and reliable for everyone, especially those in remote areas or with busy schedules.</span>
+        
+       <h2> Our Story </h2>
+        
+       <span> Founded in [Year], Quick Fix Auto was born out of the need to offer hassle-free car services without the inconvenience of visiting a workshop. With a team of highly skilled and experienced mechanics, we bring professional car care to your location, whether it's your home, office, or any place of your choice.</span>
+        
+        <h2>Our Services</h2>
+        
+        <li>We offer a wide range of services to meet all your car care needs, including: </li>
+     <br>   <li><b>Regular Maintenance:</b> Oil changes, brake inspections, tire rotations, and more.</li>
+     <br>   <li><b>Repairs: </b>Engine diagnostics, transmission repairs, brake replacements, and more.</li>
+     <br>   <li><b>Emergency Services:</b> On-the-spot breakdown assistance and roadside support.</li>
+     <br>   <li><b>Specialized Services:</b> Custom car care plans tailored to your vehicle's specific needs.</li>
+        
+        <h2>Why Choose Us?</h2>
+        
+        <ul>
+          <li>Convenience: We come to you, saving you time and effort.<br></li>
+     <br>     <li><b>Expertise:</b> Our mechanics are certified professionals with years of experience.<br></li>
+     <br>     <li><b>Quality:</b> We use high-quality parts and tools to ensure your car gets the best care.<br></li>
+     <br>     <li><b>Transparency:</b> We provide upfront pricing with no hidden costs.<br></li>
+     <br>     <li><b> Customer-Centric: </b>Your satisfaction is our top priority. We go the extra mile to ensure you're happy with our services.<br></li>
+     <br>
+    </ul>
+    <h3>Our Vision</h2>
+    
+        To revolutionize the car care industry by making high-quality services accessible and convenient for everyone. We aim to be the go-to solution for all car owners seeking reliable and hassle-free automotive care.
+      
+        </p>
+      <div class="team">
+        <h2>Meet Our Team</h2>
+        <section class="team">
+          <h2>Our Team</h2>
+          <div class="team-member">
+            <img src="\html\img\WhatsApp Image 2024-06-03 at 23.32.08_eea3c35a.jpg" width="150px" alt="">
+              <h3>Ankit Baingane</h3>
+              <p>Project Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="\html\img\WhatsApp Image 2024-06-03 at 20.54.52_b2b89591.jpg" width="120px" alt="">
+
+              <h3>Anshita Sharma</h3>
+              <p>UI/UX Designer</p>
+          </div>
+          <div class="team-member">
+            <img src="\html\img\1710863055031.jpg" width="123px"  alt="">
+
+              <h3>Arun Vishwakarma</h3>
+              <p>Lead Developer</p>
+          </div>
+      </section>
+      </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Quick Fix Auto</h3>
+          <p>
+            Quick Fix Auto is your trusted partner for all your car repair and
+            maintenance needs. We provide high-quality services to ensure your
+            vehicle is always in top condition.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="emergency-booking.html">emergency</a></li>
+            <li><a href="customer-portal.html">Customer Portal</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Phone: 123-456-7890</p>
+          <p>Email: info@quickfixauto.com</p>
+          <p>Address: Bholaram ustad marg, indore, mp, India</p>
+          <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Quick Fix Auto. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // Close the login modal
+      function closeLogin() {
+        document.getElementById("login-modal").style.display = "none";
+        window.location.href = "index.html"; // Replace with your home page URL
+      }
+
+      // Handle login form submission
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Add your form validation and AJAX login logic here
+          // Assuming login is successful, update the navbar
+
+          // Hide the login link
+          document.getElementById("login-link").style.display = "none";
+
+          // Show the account graphic
+          document.getElementById("account-placeholder").style.display =
+            "block";
+        });
+    </script>
+  </body>
+</html>

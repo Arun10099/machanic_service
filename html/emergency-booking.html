@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Booking - Quick Fix Auto</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/emergency-booking.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="/css/Screenshot_2024-06-02_055538-removebg-preview.png"
+            alt="Quick Fix Auto Logo"
+          />
+        </div>
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li>
+            <a href="#services">Services</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/html/appointment.html">
+                  <img
+                    src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbAGWM6MzQf-tIDVscBHsVFkzXg2ht-Dw-IrF4X7tLcOmWnRy2"
+                    alt="Appointment Logo"
+                    class="partner-logo"
+                  />
+                  Book Appointment
+                </a>
+              </li>
+              <li>
+                <a href="/html/emergency-booking.html">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4blB63BR2Qz0u1JsN3WV4N86ZB_MPYAEyC6_-ijCn8EGAOM"
+                    alt="Emergency Service Logo"
+                    class="partner-logo"
+                  />
+                  Emergency Service
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#for-business">For Business</a>
+            <ul class="dropdown">
+              <li>
+                <a href="#mechanic-partner">
+                  <img
+                    src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4u5KSxkv8UH3i_0pNbfJwjrET5vU-6gV5_myiqEP59hI8jxTU"
+                    alt="Partner Logo"
+                    class="partner-logo"
+                  />
+                  Mechanic Partner
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+            <ul class="dropdown-about"></ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/login/login.html" id="login-link">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="emergency-booking">
+      <div class="container">
+        <a href="../html/index.html" class="close-btn">&times;</a>
+        <h2>Emergency Booking</h2>
+        <form id="emergencyBookingForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="car-model">Car Model</label>
+            <input type="text" id="car-model" name="car-model" required />
+          </div>
+          <div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input type="text" id="latitude" name="latitude" readonly />
+          </div>
+          <div class="form-group">
+            <label for="longitude">Longitude</label>
+            <input type="text" id="longitude" name="longitude" readonly />
+          </div>
+          <button type="button" onclick="getLocation()">Get Location</button>
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Quick Fix Auto. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function showPosition(position) {
+        document.getElementById("latitude").value = position.coords.latitude;
+        document.getElementById("longitude").value = position.coords.longitude;
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+        }
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault(); // Prevent form from submitting the default way
+        const form = document.getElementById("emergencyBookingForm");
+        const formData = {
+          name: form.elements["name"].value,
+          contact: form.elements["contact"].value,
+          email: form.elements["email"].value,
+          carModel: form.elements["car-model"].value,
+          latitude: form.elements["latitude"].value,
+          longitude: form.elements["longitude"].value,
+        };
+
+        localStorage.setItem("emergencyBooking", JSON.stringify(formData));
+        alert("Form data saved!");
+      }
+    </script>
+  </body>
+</html>
